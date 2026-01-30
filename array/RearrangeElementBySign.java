@@ -7,10 +7,10 @@ class Solution {
         for (int num : nums) {
             if (num > 0) {
                 ans[pos] = num;
-                pos += 2;
+                pos = pos + 2;
             } else {
                 ans[neg] = num;
-                neg += 2;
+                neg = neg + 2;
             }
         }
         return ans;
