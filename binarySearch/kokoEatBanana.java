@@ -15,7 +15,6 @@ class Solution {
         }
     return low;
     }
-
     int calTotalHrs(int[] piles, int h){
         int totalHrs = 0;
 
