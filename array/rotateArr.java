@@ -1,4 +1,4 @@
-import java.util.*;
+/*import java.util.*;
 
 class rotateArr{
     public static void main(String[] args){
@@ -30,5 +30,49 @@ class rotateArr{
             first++;
             last--;
         }
+    }
+}
+*/
+
+
+import java.util.*;
+
+class rotateArr{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int d = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        d = d%n;
+
+        Rotate(arr, 0, n-1);
+        Rotate(arr, 0, d-1);
+        Rotate(arr, d, n-1);
+
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void Rotate(int[] arr, int low, int high){
+
+        int n = arr.length;
+
+        while(low < high){
+            int temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+
+            low++;
+            high--;
+        }
+        
     }
 }
